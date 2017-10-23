@@ -1,0 +1,50 @@
+{
+  "name": "@jedmao/ini",
+  "version": "0.1.0",
+  "description": "A highly configurable INI parser that reads and writes the informal INI file format.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "ava",
+    "watch": "npm test -- --watch",
+    "prepub": "npm run clean && npm run build",
+    "pub": "npm pack ./dist"
+  },
+  "ava": {
+    "files": [
+      "dist/**/*.test.js"
+    ],
+    "source": [
+      "dist/**/*.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jedmao/ini.git"
+  },
+  "keywords": [
+    "ini",
+    "parser",
+    "parse",
+    "read",
+    "write",
+    "format",
+    "configurable"
+  ],
+  "author": "Jed Mao <jedmao@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jedmao/ini/issues"
+  },
+  "homepage": "https://github.com/jedmao/ini#readme",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "cpy-cli": "^1.0.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {}
+}
